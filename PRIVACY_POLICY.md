@@ -3,17 +3,13 @@
 **Last updated:** 10 June 2026
 **Applies to:** the "What's That Game" mobile app (iOS and Android) and its backend API.
 
-> **Before you publish, fill the bracketed placeholders** (legal entity, contact email, jurisdiction, hosting region) and host this document at a public HTTPS URL. The App Store and Google Play both require a reachable privacy-policy link in the store listing and in the app.
-
----
-
 ## 1. Who we are
 
-What's That Game ("we", "us", "our") is operated by **[LEGAL ENTITY NAME]**, **[REGISTERED ADDRESS]**, **[COUNTRY]**.
+What's That Game ("we", "us", "our") is an independent project run by its founding team. We are **not yet incorporated as a legal entity** — the project is currently operated privately by its founders. If and when we incorporate, this policy will be updated with the company details.
 
-For any privacy question or request, contact us at **[PRIVACY CONTACT EMAIL]**.
+For any privacy question or request, contact us at **whatsthatgameteam@gmail.com**.
 
-This is the data controller for the purposes of the UK GDPR / EU GDPR.
+The project founders act as joint data controllers for the purposes of the UK GDPR / EU GDPR.
 
 ---
 
@@ -114,7 +110,7 @@ We do **not** sell your personal data or share it with advertisers.
 
 ## 7. International transfers
 
-Our backend and database are hosted on **Railway**, and our processors (Google, OpenAI, Amplitude) may process data in the **[HOSTING/PROCESSING REGION, e.g. United States]**. Where data leaves the UK/EEA, transfers are protected by appropriate safeguards such as Standard Contractual Clauses.
+Our backend and database are hosted on **Railway**, and our processors (Google, OpenAI, Amplitude) may process data in **Europe**. Where data leaves the UK/EEA, transfers are protected by appropriate safeguards such as Standard Contractual Clauses.
 
 ---
 
@@ -131,17 +127,17 @@ Our backend and database are hosted on **Railway**, and our processors (Google, 
 
 Depending on your location, you have the right to access, correct, delete, restrict, or object to processing of your personal data, and to data portability.
 
-- **Delete your account:** you can delete your account from within the app. This removes your user record from our database. You can also email us at **[PRIVACY CONTACT EMAIL]**.
+- **Delete your account:** you can delete your account from within the app. This removes your user record from our database. You can also email us at **whatsthatgameteam@gmail.com**.
 - **Access / correction:** update your profile in the app, or contact us.
 - **Withdraw analytics consent:** where we rely on consent, you can withdraw it at any time via in-app settings / OS-level controls.
 
-To exercise any right, email **[PRIVACY CONTACT EMAIL]**. You also have the right to complain to your data protection authority (in the UK, the ICO: https://ico.org.uk).
+To exercise any right, email **whatsthatgameteam@gmail.com**. You also have the right to complain to your data protection authority (in the UK, the ICO: https://ico.org.uk).
 
 ---
 
 ## 10. Children
 
-What's That Game is not directed at children under **[MINIMUM AGE, e.g. 13 / 16]**. We do not knowingly collect data from children under that age. If you believe a child has given us data, contact us and we will delete it. Some games are gated as adult content and require an appropriate age.
+What's That Game is not directed at children under **13**. You must be at least 13 to create an account. We do not knowingly collect data from children under that age. If you believe a child has given us data, contact us and we will delete it. Some games are gated as adult content and require an appropriate age.
 
 ---
 
@@ -159,6 +155,5 @@ We may update this policy. We will post the new version with an updated "Last up
 
 ## 13. Contact
 
-**[LEGAL ENTITY NAME]**
-Email: **[PRIVACY CONTACT EMAIL]**
-Address: **[REGISTERED ADDRESS]**
+**What's That Game** (founding team)
+Email: **whatsthatgameteam@gmail.com**
