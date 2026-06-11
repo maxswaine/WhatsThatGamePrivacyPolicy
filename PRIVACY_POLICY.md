@@ -1,6 +1,6 @@
 # Privacy Policy — What's That Game
 
-**Last updated:** 10 June 2026
+**Last updated:** 11 June 2026
 **Applies to:** the "What's That Game" mobile app (iOS and Android) and its backend API.
 
 ## 1. Who we are
@@ -116,10 +116,12 @@ Our backend and database are hosted on **Railway**, and our processors (Google, 
 
 ## 8. How long we keep data
 
-- Account and content data: kept while your account is active.
-- When you delete your account, your user record and associated content are deleted from our database (see §9).
-- Analytics data is retained according to Amplitude's retention settings.
-- Backups and logs are kept for a limited period for security and recovery, then deleted.
+- **Active accounts:** account data and content are kept while your account is active.
+- **Account deletion — Stage 1 (Day 0):** when you request deletion, your account is deactivated immediately and login is blocked. Your data is not yet deleted.
+- **Recovery window (Days 1–30):** you can reactivate your account and restore full access within 30 days of requesting deletion.
+- **Account deletion — Stage 2 (Day 30):** after the 30-day window expires, we permanently erase your personal data (name, email, date of birth, country, avatar, authentication credentials). Private games and their associated content are deleted. Public games you contributed are retained anonymously (attributed to "Deleted user") so the platform catalogue remains useful. Comments you posted are retained anonymously. User reports, favourites, and achievements are deleted.
+- **Analytics data** is retained according to Amplitude's retention settings.
+- **Backups and logs** are kept for a limited period for security and recovery, then deleted.
 
 ---
 
@@ -127,7 +129,7 @@ Our backend and database are hosted on **Railway**, and our processors (Google, 
 
 Depending on your location, you have the right to access, correct, delete, restrict, or object to processing of your personal data, and to data portability.
 
-- **Delete your account:** you can delete your account from within the app. This removes your user record from our database. You can also email us at **whatsthatgameteam@gmail.com**.
+- **Delete your account:** you can request deletion from within the app. Your account is deactivated immediately and permanently erased after 30 days (see §8). You can cancel deletion and reactivate within those 30 days. You can also email us at **whatsthatgameteam@gmail.com** for manual erasure requests.
 - **Access / correction:** update your profile in the app, or contact us.
 - **Withdraw analytics consent:** where we rely on consent, you can withdraw it at any time via in-app settings / OS-level controls.
 

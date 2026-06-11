@@ -20,6 +20,7 @@
   h1 { font-size:2rem; line-height:1.2; margin:0 0 .3em; letter-spacing:-.01em; }
   h2 { font-size:1.3rem; margin:2.2em 0 .6em; padding-top:.4em; border-top:1px solid var(--line); }
   h2:first-of-type { border-top:none; }
+  h3 { font-size:1.05rem; margin:1.6em 0 .4em; }
   h1 + p, .meta { color:var(--muted); }
   .meta { font-size:.92rem; margin:.2em 0; }
   a { color:var(--accent); }
@@ -27,9 +28,8 @@
   th, td { border:1px solid var(--line); padding:8px 11px; text-align:left; vertical-align:top; }
   th { background:var(--code); font-weight:600; }
   code { background:var(--code); padding:.12em .4em; border-radius:4px; font-size:.88em; }
-  blockquote { margin:1.2em 0; padding:.6em 1em; border-left:3px solid var(--accent); background:var(--code); border-radius:0 6px 6px 0; color:var(--muted); }
   hr { border:none; border-top:1px solid var(--line); margin:2.4em 0; }
-  ul { padding-left:1.3em; }
+  ul, ol { padding-left:1.3em; }
   li { margin:.3em 0; }
   footer { margin-top:3em; color:var(--muted); font-size:.85rem; }
 </style>
@@ -38,7 +38,7 @@
 <div class="wrap">
 
 <h1>Privacy Policy — What's That Game</h1>
-<p class="meta"><strong>Last updated:</strong> 10 June 2026</p>
+<p class="meta"><strong>Last updated:</strong> 11 June 2026</p>
 <p class="meta"><strong>Applies to:</strong> the "What's That Game" mobile app (iOS and Android) and its backend API.</p>
 
 <h2>1. Who we are</h2>
@@ -133,16 +133,18 @@
 
 <h2>8. How long we keep data</h2>
 <ul>
-<li>Account and content data: kept while your account is active.</li>
-<li>When you delete your account, your user record and associated content are deleted from our database (see §9).</li>
-<li>Analytics data is retained according to Amplitude's retention settings.</li>
-<li>Backups and logs are kept for a limited period for security and recovery, then deleted.</li>
+<li><strong>Active accounts:</strong> account data and content are kept while your account is active.</li>
+<li><strong>Account deletion — Stage 1 (Day 0):</strong> when you request deletion, your account is deactivated immediately and login is blocked. Your data is not yet deleted.</li>
+<li><strong>Recovery window (Days 1–30):</strong> you can reactivate your account and restore full access within 30 days of requesting deletion.</li>
+<li><strong>Account deletion — Stage 2 (Day 30):</strong> after the 30-day window expires, we permanently erase your personal data (name, email, date of birth, country, avatar, authentication credentials). Private games and their associated content are deleted. Public games you contributed are retained anonymously (attributed to "Deleted user") so the platform catalogue remains useful. Comments you posted are retained anonymously. User reports, favourites, and achievements are deleted.</li>
+<li><strong>Analytics data</strong> is retained according to Amplitude's retention settings.</li>
+<li><strong>Backups and logs</strong> are kept for a limited period for security and recovery, then deleted.</li>
 </ul>
 
 <h2>9. Your rights and choices</h2>
 <p>Depending on your location, you have the right to access, correct, delete, restrict, or object to processing of your personal data, and to data portability.</p>
 <ul>
-<li><strong>Delete your account:</strong> you can delete your account from within the app. This removes your user record from our database. You can also email us at <strong><a href="mailto:whatsthatgameteam@gmail.com">whatsthatgameteam@gmail.com</a></strong>.</li>
+<li><strong>Delete your account:</strong> you can request deletion from within the app. Your account is deactivated immediately and permanently erased after 30 days (see §8). You can cancel deletion and reactivate within those 30 days. You can also email us at <strong><a href="mailto:whatsthatgameteam@gmail.com">whatsthatgameteam@gmail.com</a></strong> for manual erasure requests.</li>
 <li><strong>Access / correction:</strong> update your profile in the app, or contact us.</li>
 <li><strong>Withdraw analytics consent:</strong> where we rely on consent, you can withdraw it at any time via in-app settings / OS-level controls.</li>
 </ul>
