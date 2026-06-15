@@ -36,16 +36,24 @@ What's That Game lets you create, store, search and discover party/board games. 
 
 We also automatically record an account `role`, an active/inactive flag, and account `created`/`last updated` timestamps.
 
-### 3.2 Google sign-in data (if you choose "Sign in with Google")
+### 3.2 Sign-in provider data (if you choose "Sign in with Google" or "Sign in with Apple")
 
-If you sign in with Google, we receive from Google — under the `openid email profile` scopes — your:
+You can create or access your account using a third-party identity provider. We do **not** receive your Google or Apple password.
+
+**Sign in with Google** — under the `openid email profile` scopes, Google gives us your:
 
 - Email address (and whether it is verified)
 - Google account ID (`sub`)
 - First name and last name (`given_name`, `family_name`)
 - Profile picture URL
 
-We store these to create and identify your account. We do **not** receive your Google password.
+**Sign in with Apple** — Apple gives us your:
+
+- Apple account identifier (`sub`) — a stable user ID we use to recognise you on return visits
+- Email address — used as your account identifier. This may be a **private relay address** (Apple's "Hide My Email") of the form `something@privaterelay.appleid.com`. We accept and store relay addresses and treat them exactly the same as a real email address for all account purposes (login, recovery, service notices).
+- First name and last name, if you choose to share them at sign-up — stored as part of your profile. Apple provides these **only on first sign-up**.
+
+We store these to create and identify your account.
 
 ### 3.3 Content you create
 
@@ -99,7 +107,8 @@ We share data only with providers that help us run the service:
 
 | Provider | Role | What they receive |
 |----------|------|-------------------|
-| **Google** | Sign-in (OAuth) | Authentication exchange; we receive your basic profile (§3.2) |
+| **Google** | Sign-in (OAuth) | Authentication exchange; we receive your basic profile (§3.2). [Google Privacy Policy](https://policies.google.com/privacy) |
+| **Apple** | Sign in with Apple | Authentication exchange; we receive your Apple ID, email (or relay address) and name (§3.2). [Apple Privacy Policy](https://www.apple.com/legal/privacy/) |
 | **OpenAI** | Embeddings + AI text suggestions | Game text you submit (§5) |
 | **Amplitude** | Product analytics | Usage events and device/technical data (§3.4) |
 | **Railway** | Hosting + managed PostgreSQL database | All data needed to run the service, stored at rest |
@@ -119,7 +128,7 @@ Our backend and database are hosted on **Railway**, and our processors (Google, 
 - **Active accounts:** account data and content are kept while your account is active.
 - **Account deletion — Stage 1 (Day 0):** when you request deletion, your account is deactivated immediately and login is blocked. Your data is not yet deleted.
 - **Recovery window (Days 1–30):** you can reactivate your account and restore full access within 30 days of requesting deletion.
-- **Account deletion — Stage 2 (Day 30):** after the 30-day window expires, we permanently erase your personal data (name, email, date of birth, country, avatar, authentication credentials). Private games and their associated content are deleted. Public games you contributed are retained anonymously (attributed to "Deleted user") so the platform catalogue remains useful. Comments you posted are retained anonymously. User reports, favourites, and achievements are deleted.
+- **Account deletion — Stage 2 (Day 30):** after the 30-day window expires, we permanently erase your personal data (name, email — including any Apple "Hide My Email" relay address, date of birth, country, avatar, authentication credentials, and any third-party sign-in identifier such as your Apple or Google user ID (`sub`)). Private games and their associated content are deleted. Public games you contributed are retained anonymously (attributed to "Deleted user") so the platform catalogue remains useful. Comments you posted are retained anonymously. User reports, favourites, and achievements are deleted.
 - **Analytics data** is retained according to Amplitude's retention settings.
 - **Backups and logs** are kept for a limited period for security and recovery, then deleted.
 

@@ -67,15 +67,22 @@
 </table>
 <p>We also automatically record an account <code>role</code>, an active/inactive flag, and account created/last-updated timestamps.</p>
 
-<h3>3.2 Google sign-in data (if you choose "Sign in with Google")</h3>
-<p>If you sign in with Google, we receive from Google — under the <code>openid email profile</code> scopes — your:</p>
+<h3>3.2 Sign-in provider data (if you choose "Sign in with Google" or "Sign in with Apple")</h3>
+<p>You can create or access your account using a third-party identity provider. We do <strong>not</strong> receive your Google or Apple password.</p>
+<p><strong>Sign in with Google</strong> — under the <code>openid email profile</code> scopes, Google gives us your:</p>
 <ul>
 <li>Email address (and whether it is verified)</li>
 <li>Google account ID (<code>sub</code>)</li>
 <li>First name and last name (<code>given_name</code>, <code>family_name</code>)</li>
 <li>Profile picture URL</li>
 </ul>
-<p>We store these to create and identify your account. We do <strong>not</strong> receive your Google password.</p>
+<p><strong>Sign in with Apple</strong> — Apple gives us your:</p>
+<ul>
+<li>Apple account identifier (<code>sub</code>) — a stable user ID we use to recognise you on return visits</li>
+<li>Email address — used as your account identifier. This may be a <strong>private relay address</strong> (Apple's "Hide My Email") of the form <code>something@privaterelay.appleid.com</code>. We accept and store relay addresses and treat them exactly the same as a real email address for all account purposes (login, recovery, service notices).</li>
+<li>First name and last name, if you choose to share them at sign-up — stored as part of your profile. Apple provides these <strong>only on first sign-up</strong>.</li>
+</ul>
+<p>We store these to create and identify your account.</p>
 
 <h3>3.3 Content you create</h3>
 <ul>
@@ -120,7 +127,8 @@
 <table>
 <thead><tr><th>Provider</th><th>Role</th><th>What they receive</th></tr></thead>
 <tbody>
-<tr><td><strong>Google</strong></td><td>Sign-in (OAuth)</td><td>Authentication exchange; we receive your basic profile (§3.2)</td></tr>
+<tr><td><strong>Google</strong></td><td>Sign-in (OAuth)</td><td>Authentication exchange; we receive your basic profile (§3.2). <a href="https://policies.google.com/privacy">Google Privacy Policy</a></td></tr>
+<tr><td><strong>Apple</strong></td><td>Sign in with Apple</td><td>Authentication exchange; we receive your Apple ID, email (or relay address) and name (§3.2). <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a></td></tr>
 <tr><td><strong>OpenAI</strong></td><td>Embeddings + AI text suggestions</td><td>Game text you submit (§5)</td></tr>
 <tr><td><strong>Amplitude</strong></td><td>Product analytics</td><td>Usage events and device/technical data (§3.4)</td></tr>
 <tr><td><strong>Railway</strong></td><td>Hosting + managed PostgreSQL database</td><td>All data needed to run the service, stored at rest</td></tr>
@@ -136,7 +144,7 @@
 <li><strong>Active accounts:</strong> account data and content are kept while your account is active.</li>
 <li><strong>Account deletion — Stage 1 (Day 0):</strong> when you request deletion, your account is deactivated immediately and login is blocked. Your data is not yet deleted.</li>
 <li><strong>Recovery window (Days 1–30):</strong> you can reactivate your account and restore full access within 30 days of requesting deletion.</li>
-<li><strong>Account deletion — Stage 2 (Day 30):</strong> after the 30-day window expires, we permanently erase your personal data (name, email, date of birth, country, avatar, authentication credentials). Private games and their associated content are deleted. Public games you contributed are retained anonymously (attributed to "Deleted user") so the platform catalogue remains useful. Comments you posted are retained anonymously. User reports, favourites, and achievements are deleted.</li>
+<li><strong>Account deletion — Stage 2 (Day 30):</strong> after the 30-day window expires, we permanently erase your personal data (name, email — including any Apple "Hide My Email" relay address, date of birth, country, avatar, authentication credentials, and any third-party sign-in identifier such as your Apple or Google user ID (<code>sub</code>)). Private games and their associated content are deleted. Public games you contributed are retained anonymously (attributed to "Deleted user") so the platform catalogue remains useful. Comments you posted are retained anonymously. User reports, favourites, and achievements are deleted.</li>
 <li><strong>Analytics data</strong> is retained according to Amplitude's retention settings.</li>
 <li><strong>Backups and logs</strong> are kept for a limited period for security and recovery, then deleted.</li>
 </ul>
